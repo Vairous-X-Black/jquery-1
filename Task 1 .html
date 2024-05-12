@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Task 1</title>
+
+
+    <style>
+             /* ----------------------------------------------------- Task 1 */
+            body{
+                background-color: grey;
+            }
+            div{
+            margin-top: 150px;
+            margin-left: 50px;
+            }
+        input{
+            padding: 10px;
+            outline: none;
+            width: 80%;
+            margin-top: 20px;
+            display: block;
+            margin-left: 80px;
+            
+        }
+        button{
+            background-color: green;
+            color: #fff;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+            margin-top: 30px;
+            padding: 15px 30px;
+            margin-left: 500px;
+        }
+        .alert::placeholder{
+            color: red;
+            font-size: 20px;
+        } 
+
+
+
+    </style>
+</head>
+<body>
+    
+
+                    <!------------------------------  Task 1  -->
+    <div>
+        <input type="text" placeholder="Name" class="name">
+        <input type="text" placeholder="Phone" class="phone">
+        <input type="text" placeholder="Email" class="email">
+        <input type="text" placeholder="Addres" class="addres">
+        <button>Submit</button>
+    </div>
+
+
+
+
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+              // -----------------  ---------------- -Task 1
+    $('button').click(function(){
+        let name = $(".name").val();               // قيمة الاسم
+        let email = $(".email").val();          // قيمة الايميل
+        let addres = $(".addres").val();   // قيمة العنوان 
+        let phone = $(".phone").val();   // قيمة الفون 
+        if (!name) {                      // لو قيمة الاسم فاضيه
+            $(".name").attr("placeholder" , 'Please Enter Your Name').addClass("alert")
+        }
+        if (!email) {               // لو قيمة الايمل فاضيه
+            $(".email").attr("placeholder" , 'Please Enter Your Email').addClass("alert")
+        }
+        if (!addres) {         //  لو قيمة العنوان فاضيه
+            $(".addres").attr("placeholder" , 'Please Enter Your Addres').addClass("alert")
+        }
+        if (!phone) {         //لو قيمة الفون فاضيه 
+            $(".phone").attr("placeholder" , 'Please Enter Your Phone').addClass("alert")
+        }
+    })
+
+
+
+
+
+
+    </script>
+</body>
+</html>
